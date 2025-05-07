@@ -42,6 +42,16 @@ categorySelect.addEventListener('change', (e) => {
     displayQuote();
 });
 
+document.getElementById('next-quote').addEventListener('click', (e) => {
+    currentIndex++;
+    displayQuote();
+});
+
+document.getElementById('prev-quote').addEventListener('click', (e) => {
+    currentIndex--;
+    displayQuote();
+});
+
 displayQuote();
 
 

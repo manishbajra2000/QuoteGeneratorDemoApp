@@ -13,6 +13,7 @@ let fontSize = 16;
 
 const categorySelect = document.getElementById('category-select');
 const quoteText = document.getElementById('quote-text');
+const themeSwitch = document.getElementById('theme-switch');
 
 // const getFilteredQuotes = () => {
 //     if (currentCategory === 'all') {
@@ -71,6 +72,12 @@ document.getElementById('decrease-font').addEventListener('click', () => {
     quoteText.style.fontSize = fontSize + 'px';
 });
 
+themeSwitch.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode', themeSwitch.checked)
+});
+
+
+//initial display
 displayQuote();
 
 

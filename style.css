@@ -4,11 +4,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /*changed for darkmode*/
+    color: #333; /*changed for darkmode*/
     transition: background-color 0.3s, color 0.3s;
 }
-
 .dark-mode {
     background-color: #1e1e1e;
     color: #f4f4f4;
@@ -18,10 +17,13 @@ body {
     max-width: 600px;
     margin: 2rem auto;
     padding: 1.5rem;
-    background-color: white;
+    background-color: white; /*changed for darkmode*/
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
+}
+.dark-mode .app-container {
+    background-color: #2c2c2c;
 }
 
 h1{
@@ -43,21 +45,31 @@ h1{
 .controls-container button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /*changed for darkmode*/
     border-radius: 6px;
     cursor: pointer;
-    background: white;
+    background: white; /*changed for darkmode*/
     transition: background-color 0.2s, color 0.2s;
+}
+.dark-mode .controls-container select,
+.dark-mode .controls-container button,
+.dark-mode .controls-container label {
+    background: #444;
+    color: #f4f4f4;
+    border: 1px solid #666;
 }
 
 .quote-box {
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; /*changed for darkmode*/
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
     font-size: 16px;
     line-height: 1.6;
     transition: background-color 0.3s;
+}
+.dark-mode .quote-box {
+    background-color: #3a3a3a;
 }
 
 .navigation-buttons {

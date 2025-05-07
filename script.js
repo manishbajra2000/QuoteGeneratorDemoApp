@@ -53,8 +53,14 @@ document.getElementById('prev-quote').addEventListener('click', (e) => {
     displayQuote();
 });
 
+document.getElementById('random-quote').addEventListener('click', (e) => {
+    const filteredQuotes= getFilteredQuotes();
+    currentIndex = Math.floor(Math.random() * filteredQuotes.length);
+    displayQuote();
+});
+
 document.getElementById('increase-font').addEventListener('click', () => {
-    if (fontSize > 32) { return };
+    if (fontSize > 40) { return };
     fontSize += 2;
     quoteText.style.fontSize = fontSize + 'px';
 });

@@ -9,6 +9,7 @@ const quotes = [
 
 let currentIndex = 0;
 let currentCategory = 'all';
+let fontSize = 16;
 
 const categorySelect = document.getElementById('category-select');
 const quoteText = document.getElementById('quote-text');
@@ -50,6 +51,18 @@ document.getElementById('next-quote').addEventListener('click', (e) => {
 document.getElementById('prev-quote').addEventListener('click', (e) => {
     currentIndex--;
     displayQuote();
+});
+
+document.getElementById('increase-font').addEventListener('click', () => {
+    if (fontSize > 32) { return };
+    fontSize += 2;
+    quoteText.style.fontSize = fontSize + 'px';
+});
+
+document.getElementById('decrease-font').addEventListener('click', () => {
+    if (fontSize < 14) { return };
+    fontSize -= 2;
+    quoteText.style.fontSize = fontSize + 'px';
 });
 
 displayQuote();

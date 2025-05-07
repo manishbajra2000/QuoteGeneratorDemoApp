@@ -93,5 +93,15 @@ h1{
     background-color: #0056b3;
 }
 
+/* applies styles only when the screen width is 600px or less (for mobile devices)*/
+@media (max-width: 600px) {
+    .controls-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  
+    .navigation-buttons {
+        flex-direction: column;
+        gap: -.75rem;
+    }
+}

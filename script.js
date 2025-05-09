@@ -65,21 +65,34 @@ categorySelect.addEventListener('change', (e) => {
     displayQuote();
 });
 
-document.getElementById('next-quote').addEventListener('click', (e) => {
+// document.getElementById('next-quote').addEventListener('click', (e) => {
+//     currentIndex++;
+//     displayQuote();
+// });
+function nextQuote() {
     currentIndex++;
     displayQuote();
-});
+}
 
-document.getElementById('prev-quote').addEventListener('click', (e) => {
+// document.getElementById('prev-quote').addEventListener('click', (e) => {
+//     currentIndex--;
+//     displayQuote();
+// });
+function prevQuote() {
     currentIndex--;
     displayQuote();
-});
+}
 
-document.getElementById('random-quote').addEventListener('click', (e) => {
+// document.getElementById('random-quote').addEventListener('click', (e) => {
+//     const filteredQuotes= getFilteredQuotes();
+//     currentIndex = Math.floor(Math.random() * filteredQuotes.length);
+//     displayQuote();
+// });
+function randomQuote() {
     const filteredQuotes= getFilteredQuotes();
     currentIndex = Math.floor(Math.random() * filteredQuotes.length);
     displayQuote();
-});
+}
 
 document.getElementById('increase-font').addEventListener('click', () => {
     if (fontSize > 40) { return };
@@ -94,7 +107,7 @@ document.getElementById('decrease-font').addEventListener('click', () => {
 });
 
 themeSwitch.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode', themeSwitch.checked)
+    document.body.classList.toggle('dark-mode', themeSwitch.checked);
 });
 
 

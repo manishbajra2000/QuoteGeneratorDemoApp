@@ -13,7 +13,7 @@
         <h1>Quote Generator</h1>
 
         <div class="controls-container">
-            <select id="category-select">
+            <select id="category-select" onch>
                 <option value="all" selected>All</option>
                 <option value="science">Science</option>
                 <option value="inspiration">Inspiration</option>
@@ -22,9 +22,7 @@
             </select>
 
             <div class="theme-toggle">
-                <label for="theme">
                     <input type="checkbox" id="theme-switch">Dark Mode
-                </label>
             </div>
     
             <div class="font-size-controls">
@@ -39,9 +37,9 @@
         </div>
 
         <div class="navigation-buttons">
-            <button id="prev-quote">Previous</button>
-            <button id="random-quote">Random</button>
-            <button id="next-quote">Next</button>
+            <button id="prev-quote" onclick="prevQuote()">Previous</button>
+            <button id="random-quote" onclick="randomQuote()">Random</button>
+            <button id="next-quote" onclick="nextQuote()">Next</button>
         </div>
     </div>
     <script src="script.js"></script>

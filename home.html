@@ -13,7 +13,7 @@
         <h1>Quote Generator</h1>
 
         <div class="controls-container">
-            <select id="category-select" onch>
+            <select id="category-select">
                 <option value="all" selected>All</option>
                 <option value="science">Science</option>
                 <option value="inspiration">Inspiration</option>
@@ -26,8 +26,8 @@
             </div>
     
             <div class="font-size-controls">
-                <button id="decrease-font">A-</button>
-                <button id="increase-font">A+</button>
+                <button id="decrease-font" onclick="decreaseFont()">A-</button>
+                <button id="increase-font" onclick="increaseFont()">A+</button>
             </div>
 
         </div>

@@ -36,6 +36,9 @@ const categorySelect = document.getElementById('category-select');
 const quoteText = document.getElementById('quote-text');
 const themeSwitch = document.getElementById('theme-switch');
 
+
+/* --- Displaying in Quote Box --- */
+
 // const getFilteredQuotes = () => {
 //     if (currentCategory === 'all') {
 //         return quotes;
@@ -46,7 +49,6 @@ const themeSwitch = document.getElementById('theme-switch');
 // }
 //
 // which is same as using ternary operator one-code below:
-
 const getFilteredQuotes = () => currentCategory === 'all' ? quotes : quotes.filter(q => q.category === currentCategory);
 
 const displayQuote = () => {
@@ -59,11 +61,18 @@ const displayQuote = () => {
     quoteText.textContent = filteredQuotes[currentIndex].text;
 }
 
+
+/* --- Category Select in Dropdown --- */
+
 categorySelect.addEventListener('change', (e) => {
     currentCategory = e.target.value;
     currentIndex = 0;
     displayQuote();
 });
+
+
+
+/* --- Displaying Next Quote --- */
 
 // document.getElementById('next-quote').addEventListener('click', (e) => {
 //     currentIndex++;
@@ -74,6 +83,10 @@ function nextQuote() {
     displayQuote();
 }
 
+
+
+/* --- Displaying Previous Quote --- */
+
 // document.getElementById('prev-quote').addEventListener('click', (e) => {
 //     currentIndex--;
 //     displayQuote();
@@ -82,6 +95,10 @@ function prevQuote() {
     currentIndex--;
     displayQuote();
 }
+
+
+
+/* --- Displaying Random Quote --- */
 
 // document.getElementById('random-quote').addEventListener('click', (e) => {
 //     const filteredQuotes= getFilteredQuotes();
@@ -94,21 +111,40 @@ function randomQuote() {
     displayQuote();
 }
 
-document.getElementById('increase-font').addEventListener('click', () => {
+
+
+/* --- Increasing Font Size --- */
+
+// document.getElementById('increase-font').addEventListener('click', () => {
+//     if (fontSize > 40) { return };
+//     fontSize += 2;
+//     quoteText.style.fontSize = fontSize + 'px';
+// });
+function increaseFont() {
     if (fontSize > 40) { return };
     fontSize += 2;
     quoteText.style.fontSize = fontSize + 'px';
-});
+}
 
-document.getElementById('decrease-font').addEventListener('click', () => {
+
+
+/* --- Decreasing Font Size --- */
+
+// document.getElementById('decrease-font').addEventListener('click', () => {
+//     if (fontSize < 14) { return };
+//     fontSize -= 2;
+//     quoteText.style.fontSize = fontSize + 'px';
+// });
+function decreaseFont() {
     if (fontSize < 14) { return };
     fontSize -= 2;
     quoteText.style.fontSize = fontSize + 'px';
-});
+}
 
 themeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode', themeSwitch.checked);
 });
+
 
 
 //initial display
